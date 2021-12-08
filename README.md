@@ -1643,7 +1643,7 @@ auto *nanodet = new lite::ncnn::cv::detection::NanoDet(param_path, bin_path);
 * [YOLOX.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolox.lite.ai.toolkit)  
 * [YOLOP.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolop.lite.ai.toolkit)
   
-  ```
+```
 lite::types::MattingContent content;
   cv::VideoCapture cap(0);
   cap.set(cv::CAP_PROP_FRAME_WIDTH, 640.0);
@@ -1657,4 +1657,4 @@ lite::types::MattingContent content;
       cv::imshow("视频显示", content.merge_mat); //显示一帧画面 
       cv::waitKey(30); //延时30ms 
   }
-  ```
+```
