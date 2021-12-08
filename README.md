@@ -1642,3 +1642,19 @@ auto *nanodet = new lite::ncnn::cv::detection::NanoDet(param_path, bin_path);
 * [RobustVideoMatting.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/RobustVideoMatting.lite.ai.toolkit)
 * [YOLOX.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolox.lite.ai.toolkit)  
 * [YOLOP.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolop.lite.ai.toolkit)
+  
+  ```
+lite::types::MattingContent content;
+  cv::VideoCapture cap(0);
+  cap.set(cv::CAP_PROP_FRAME_WIDTH, 640.0);
+  cap.set(cv::CAP_PROP_FRAME_HEIGHT, 480.0);
+  while (1) {
+      cv::Mat frame; //定义Mat变量，用来存储每一帧 
+      cap >> frame; //读取当前帧方法一 
+      //cap.read(frame); //读取当前帧方法二 
+      // 1. video matting.
+      rvm->detect(frame, content, 0.3);
+      cv::imshow("视频显示", content.merge_mat); //显示一帧画面 
+      cv::waitKey(30); //延时30ms 
+  }
+  ```
