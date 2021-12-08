@@ -1643,6 +1643,7 @@ auto *nanodet = new lite::ncnn::cv::detection::NanoDet(param_path, bin_path);
 * [YOLOX.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolox.lite.ai.toolkit)  
 * [YOLOP.lite.ai.toolkit 🚀🚀🌟](https://github.com/DefTruth/yolop.lite.ai.toolkit)
   
+## 11. 背景抠图demo可以改为摄像头代码如下（lite.ai.toolkit\examples\lite\cv\test_lite_rvm.cpp）：
 ```
 lite::types::MattingContent content;
   cv::VideoCapture cap(0);
